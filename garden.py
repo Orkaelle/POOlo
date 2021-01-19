@@ -11,7 +11,7 @@ class Garden:
     def add(self, cls):
         self._plant(cls)
 
-    def _plant(self, cls):
+    def _plant(self, cls):    
         self.vegetables.append(cls)
         self.seed += cls.seed
 

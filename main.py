@@ -3,33 +3,31 @@ from carrot import Carrot
 from bean import Bean
 from garden import Garden
 from slug import Slug
+from gardener import Gardener
 
-# Création du jardin
-g = Garden()
+# Création du jardin et du jardinier
+garden = Garden()
+Poolo = Gardener(garden)
 
 # Création des légumes
-c = Carrot()
-l = Lettuce()
-b = Bean()
+carrot = Carrot()
+lettuce = Lettuce()
+bean = Bean()
 
 # Plantation
-c.grow(8)
-l.grow(6)
-b.grow(12)
-
-g.add(c)
-g.add(l)
-g.add(b)
+carrot = Poolo.plant('carrot',12)
+lettuce = Poolo.plant('lettuce',7)
+bean = Poolo.plant('bean',9)
 
 # Invasion de limaces affamées
-slug = Slug(g)
+slug = Slug(garden)
 
-slug.eat(c,5)
-slug.eat(l,2)
-slug.eat(b,3)
+slug.eat(carrot,5)
+slug.eat(lettuce,2)
+slug.eat(bean,3)
 
-# Voyons cb de graines il reste dans le jardin :
-print(f'\nLe jardin contient {g.seed} graine(s) plantée(s), dont:')
-print(f'{c.seed} graine(s) de carotte,')
-print(f'{l.seed} graine(s) de laitue,')
-print(f'{b.seed} graine(s) de haricot.')
+# Vérifions la composition du jardin
+print(f'\nLe jardin contient {garden.seed} graine(s) plantée(s), dont:')
+print(f'{carrot.seed} graine(s) de carotte,')
+print(f'{lettuce.seed} graine(s) de laitue,')
+print(f'{bean.seed} graine(s) de haricot.')
