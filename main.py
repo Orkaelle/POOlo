@@ -34,8 +34,7 @@ bean = Poolo.plant(bean,13)
 
 
 # Vérifions la composition du jardin
-total_seed, nb_lettuce, nb_carrot, nb_bean = Poolo.count_seed()
-print(f'\nLe jardin contient {garden.seed} graine(s) plantée(s), pour {Garden.nb_type} types de légumes :')
-print(f'{nb_carrot} graine(s) de carotte,')
-print(f'{nb_lettuce} graine(s) de laitue,')
-print(f'{nb_bean} graine(s) de haricot.')
+print(f'\nThe garden contain {garden.seed} seed(s), for {Garden.nb_type} vegetable type(s) :')
+print(f'{carrot.seed} seed(s) of carrot,')
+print(f'{lettuce.seed} seed(s) of lettuce,')
+print(f'{bean.seed} seed(s) of bean.')

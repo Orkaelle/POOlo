@@ -17,18 +17,6 @@ class Gardener:
 
         return vegetable
     
-    def count_seed(self):
-        nb_lettuce, nb_carrot, nb_bean = 0, 0, 0
-        for v in self.garden.vegetables :
-            if v.type == 'lettuce':
-                nb_lettuce += v.seed
-            elif v.type == 'carrot':
-                nb_carrot += v.seed
-            elif v.type == 'bean':
-                nb_bean += v.seed
-        total_seed = nb_lettuce + nb_carrot + nb_bean
-        return total_seed, nb_lettuce, nb_carrot, nb_bean
-
     def check_capacity(self, nb_seed):
         remaining_places = 30 - self.garden.seed
         return min(remaining_places, nb_seed)
