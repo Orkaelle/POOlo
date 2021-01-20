@@ -1,12 +1,9 @@
-from vegetable import Vegetable
+from src.vegetable import Vegetable
 
-class Lettuce(Vegetable) :
+class Bean(Vegetable) :
     def __init__(self):
         self.seed = 0
-        self.type = 'lettuce'
+        self.type = 'bean'
 
     def grow(self, number=0):
         self.seed += number
-        
-
-

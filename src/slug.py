@@ -1,6 +1,6 @@
-from lettuce import Lettuce
-from carrot import Carrot
-from bean import Bean
+from src.lettuce import Lettuce
+from src.carrot import Carrot
+from src.bean import Bean
 
 class Slug:
     def __init__(self, garden):

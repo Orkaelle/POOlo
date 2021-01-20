@@ -1,4 +1,4 @@
-from vegetable import Vegetable
+from src.vegetable import Vegetable
 
 class Carrot(Vegetable) :
     def __init__(self):

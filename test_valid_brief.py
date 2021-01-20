@@ -1,7 +1,7 @@
-from lettuce import Lettuce
-from carrot import Carrot
-from bean import Bean
-from garden import Garden
+from src.lettuce import Lettuce
+from src.carrot import Carrot
+from src.bean import Bean
+from src.garden import Garden
 
 g = Garden()
 g.add(Carrot())
