@@ -15,9 +15,9 @@ lettuce = Lettuce()
 bean = Bean()
 
 # Plantation
-carrot = Poolo.plant('carrot',12)
-lettuce = Poolo.plant('lettuce',7)
-bean = Poolo.plant('bean',9)
+carrot = Poolo.plant(carrot,12)
+lettuce = Poolo.plant(lettuce,7)
+bean = Poolo.plant(bean,9)
 
 # Invasion de limaces affamées
 slug = Slug(garden)
@@ -26,8 +26,16 @@ slug.eat(carrot,5)
 slug.eat(lettuce,2)
 slug.eat(bean,3)
 
+
+# Plantation
+carrot = Poolo.plant(carrot,6)
+lettuce = Poolo.plant(lettuce,5)
+bean = Poolo.plant(bean,13)
+
+
 # Vérifions la composition du jardin
-print(f'\nLe jardin contient {garden.seed} graine(s) plantée(s), dont:')
-print(f'{carrot.seed} graine(s) de carotte,')
-print(f'{lettuce.seed} graine(s) de laitue,')
-print(f'{bean.seed} graine(s) de haricot.')
+total_seed, nb_lettuce, nb_carrot, nb_bean = Poolo.count_seed()
+print(f'\nLe jardin contient {garden.seed} graine(s) plantée(s), pour {Garden.nb_type} types de légumes :')
+print(f'{nb_carrot} graine(s) de carotte,')
+print(f'{nb_lettuce} graine(s) de laitue,')
+print(f'{nb_bean} graine(s) de haricot.')
